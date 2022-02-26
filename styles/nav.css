@@ -1,0 +1,242 @@
+
+/* <!-- <style> */
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    /* position: fixed; */
+    }
+    #leftheader{
+    display: flex;
+    gap: 30px;
+    margin:auto;
+    margin-left: 50px;
+    /* border: 1px solid red; */
+    padding: 5px;
+    }
+    #search{
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    /* border: 1px solid red; */
+    }
+    #searchbar{
+    display: block;
+    height: 100%;
+    border: none;
+    /* border: 1px solid red; */
+    }
+    #logo{
+    margin: auto;
+    }
+    #logo>img{
+    width: 110px;
+    margin: auto;
+    cursor: pointer;
+    }
+    #rightheader{
+    /* border: 1px solid red; */
+    margin-right: 50px;
+    margin: auto;
+    margin-right: 30px;
+    }
+    #rightheader>ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: auto;
+    list-style-type: none;
+    /* border: 1px solid red; */
+    }
+    li>div{
+    /* border: 1px solid red; */
+    padding: 10px 5px;
+    margin: auto;
+    cursor: pointer;
+    }
+    li>div:hover{
+    border-bottom: 1px solid black;
+    /* border: 1px solid red; */
+    }
+    #options{
+    cursor: pointer;
+    }
+    
+    
+    #user-div{
+    margin-top: 12px;
+    z-index: 999;
+    border: 1px solid red;
+    position: absolute;
+    /* left: 1200px; */
+    top: 90px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0px;
+    /* padding: 36px 25px; */
+    letter-spacing: 2px;
+    color: rgb(126, 126, 126);
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    display: none;
+    }
+    #user-div>div, #whishlist-div>div{
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+    }
+    
+    #user:hover #user-div {
+    display: block;
+    z-index: 10;
+    border: 1px solid red;
+    
+    }
+    
+    #whishlist-div{
+    width: 10%;
+    
+    z-index: 999;
+    border: 1px solid red;
+    position: absolute;
+    /* left: 1280px; */
+    top: 90px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0px;
+    /* padding: 36px 25px; */
+    letter-spacing: 2px;
+    color: rgb(126, 126, 126);
+    font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    display: none;
+    }
+    
+    #whishlist:hover #whishlist-div{
+    display: block;
+    border: 1px solid red;
+    /* margin-right: 20px; */
+    }
+    
+    #user-div:hover,#whistlist-div:hover{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    }
+
+hr{
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    #user-div{
+        margin-top: 12px;
+        z-index: 999;
+        /* border: 1px solid red; */
+        position: absolute;
+        left: 1200px;
+        top: 100px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin: 0px;
+        padding: 36px 25px;
+        letter-spacing: 2px;
+        /* color: rgb(151, 15, 15); */
+        font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        display: none;
+    }
+    #user-div:hover,#whistlist-div:hover{
+        cursor: pointer;
+    }
+    #user-div>div, #whishlist-div>div{
+        margin-bottom: 10px;
+    }
+
+    #user:hover #user-div {
+        display: block;
+        z-index: 10;
+        
+    }
+
+    #whishlist-div{
+        width: 10%;
+        margin-top: 12px;
+        z-index: 999;
+        /* border: 1px solid red; */
+        position: absolute;
+        left: 1280px;
+        top: 100px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin: 0px;
+        padding: 36px 25px;
+        letter-spacing: 2px;
+        /* color: rgb(196, 22, 22); */
+        font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        display: none;
+    }
+
+    #whishlist:hover #whishlist-div{
+        display: block;
+    }
+    #container{
+        height: 900px;
+        /* background-color: red; */
+        width: 100%;
+    }
+
+
+
+
+
+    #sidebox{
+        border: 1px solid black;
+        width: 15%;
+        height: 500px;
+        position: absolute;
+        background-color: white;
+        padding: 20px 25px;
+        overflow-y: scroll;
+        display: none;
+        color: rgb(68, 68, 68);
+        font-family: "Bodoni Sans Regular",Calibri,Helvetica,Arial,sans-serif;
+        font-weight: 550;
+        letter-spacing: 1px;
+    }
+    #sidebox>div{
+        margin-bottom: 15px;
+        cursor: pointer;
+        padding: 5px;
+        padding-left: 30px;
+    }
+    #sidebox>div:hover{
+        text-decoration: underline;
+    }

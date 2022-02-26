@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/nav.css">  
+    <!-- <link rel="stylesheet" href="./styles/footer.css">     -->
+    <style>
+        #AddData{
+width: 70%;
+margin:20px  auto;
+height: 450px;
+/* border: 1px solid black; */
+display: flex;
+grid-gap:30px;
+line-height: 30px;
+        }
+        #AddData>div:nth-child(1){
+            flex:5
+        }
+        #AddData>div:nth-child(2){
+            flex:4
+        }
+        
+        img{
+            width: 100%;
+            height: 100%;
+           
+        }
+        .ship{
+            color: red;
+            margin-left: 20px;
+            font-size: 17px;
+         line-height: 12px;
+        }
+        .ship1{
+            color: black;
+            margin-left: 20px;
+        }
+        #div2{
+            color:#222222;
+            color:rgb(34, 34, 34);
+            font-size: 20px;
+        }
+#div2 p:nth-child(1){
+    font-family:"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+Font :Verdana;
+font-size:20px;
+}
+button{
+    width: 370px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+button:hover{
+    color: white;
+    background-color: rgb(43, 42, 42);
+}
+#regis{
+    border-bottom: 1px solid #222222;
+    width: max-content;
+ color:#222222;
+color:rgb(34, 34, 34);
+font-size: 17px;
+cursor: pointer;
+}
+
+#cupon_div {
+    display: flex;
+    font-size: 13px;
+    
+}
+#cupon_div p:nth-child(1){
+    font-size: 13px;
+}
+#cupon_div p:nth-child(2){
+    font-size: 11px;
+    border-bottom: 1px solid #222222;
+    width: max-content;
+    cursor: pointer;
+    margin-left:  13px;
+    /* margin-bottom: 0; */
+    /* line-height:17.2px; */
+}
+    </style>
+</head>
+<body>
+    <div id="nav"></div>
+    <hr>
+    <div id="AddData"></div>
+    <!-- addTocartPage -->
+    <!-- <div id="footer"></div> -->
+</body>
+</html>
+<script type="module">
+    //......................for nav bar.........................//
+    import navbar from "./components/nav.js"
+        let navbar_div  = document.getElementById("nav");
+        console.log("navbar_div")
+        navbar_div.innerHTML =navbar();
+    let poufdata = JSON.parse(localStorage.getItem("addTocartPage"));
+    console.log("data",poufdata);
+
+
+//......................for footer part.....................//
+
+// import footer from "./components/footer.js"
+// let footer_div  = document.getElementById("footer");
+// footer_div.innerHTML =footer();
+// console.log("footerPart",footer)
+
+
+        function displyaData(){
+            [poufdata].map(element => {
+            console.log("el",element);
+            let  div= document.createElement("div");
+            let div2= document.createElement("div");
+            div2.setAttribute("id","div2");
+let name =document.createElement("p");
+let price =document.createElement("p");
+let title =document.createElement("p");
+let title2 =document.createElement("p");
+let image =document.createElement("img");
+let ship= document.createElement("p");
+ship.innerHTML="SHIP";
+image.src=element.image;
+name.innerText =element.name;
+price.innerText =`$    ${element.price}`;
+title.innerHTML ="Purchase now and we'll ship when it's available.";
+title2.innerHTML ="Estimated in mid March";
+title.setAttribute("class","ship")
+title2.setAttribute("class","ship")
+ship.setAttribute("class","ship1");
+let button =document.createElement("button");
+button.innerHTML="ADD TO CART";
+button.setAttribute("id","button")
+let regis =document.createElement("p");
+regis.innerHTML="ADD TO REGISTRY";
+regis.setAttribute("id","regis");
+let cupon_div=document.createElement("div");
+cupon_div.setAttribute("id","cupon_div");
+let cupon =document.createElement("p");
+let cupon1 =document.createElement("p");
+cupon1.innerHTML="CB2 CREDIT CARD";
+cupon.setAttribute("id","cupon");
+cupon.innerHTML="Earn $6 in reward dollars."
+cupon_div.append(cupon,cupon1)
+div.append(image);
+div2.append( name, price,ship,title,title2,cupon_div,button,regis)
+
+// console.log("div",div)
+document.querySelector("#AddData").append(div,div2);
+
+        });
+        }
+        displyaData();
+  
+        document.querySelector("#button").addEventListener("click",function(){
+  window.location.href="addToCart.html";
+});
+document.querySelector("#regis").addEventListener("click",function(){
+  window.location.href="sign.html";
+});
+document.querySelector("#cupon_div").addEventListener("click",function(){
+  window.location.href="cupon.html";
+});
+//     }
+//     pillowData1()
+</script>

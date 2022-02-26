@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/nav.css">  
+    <link rel="stylesheet" href="./styles/footer.css">  
+</head>
+<body>
+    <div id="nav"></div>
+    <hr>
+    <select id="select" onclick="selectValue()">
+  <option value="">Filter</option>
+  <option value="High">Low-heigh</option>
+  <option value="Low">High-Low</option>
+</select>
+<div id="container">
+<div id="sidebar"></div>
+<div id="right_bax">
+<div id="pillow_page"></div>
+    <div id="middlePart"></div>
+</div>
+
+</div>
+<div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+//......................for nav bar.........................//
+import navbar from "./components/nav.js"
+    let navbar_div  = document.getElementById("nav");
+    console.log("navbar_div")
+    navbar_div.innerHTML =navbar();
+
+//...................for side bar ......................//
+
+import sidebar from "./components/sidebar.js"
+let sidebar_div  = document.getElementById("sidebar");
+sidebar_div.innerHTML =sidebar();
+
+//......................for middle part.....................//
+
+import middlePart from "./components/middle.js"
+let middlePart_div  = document.getElementById("middlePart");
+middlePart_div.innerHTML =middlePart();
+console.log("middlePart",middlePart)
+
+//......................for footer part.....................//
+
+import footer from "./components/footer.js"
+let footer_div  = document.getElementById("footer");
+footer_div.innerHTML =footer();
+console.log("footerPart",footer)
+
+
+
+
+     var data =[
+     {
+          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2IT3EmnFnhfNl31EUN3PLmuoxnOj9q3g_B0XA4Z7zHdINBbHtpMlvy4vwJY4RqoeY3xk&usqp=CAU" ,
+          name:"CRISS KNIT BLACK POUF",
+          price:"76.3",
+        },
+        {
+          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRToov0mLflrCsI4UBaYEPEg_eqJeR5dwKUsqbnswkR1SX4uRybG25pM_v9MQU_ibrnVMw&usqp=CAU" ,
+          name:"CRISS KNIT BLACK POUF",
+          price:"89.99",
+        },
+        {
+          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs1NaJqyYKLXhtzajkq8BeZlmSFQNpy4QFld5dxM7xanVbjLW1oB8aSn97XMiB_9yGiKY&usqp=CAU" ,
+          name:"WOOL WRAP NATURAL POUF",
+          price:"50.0",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/LeatherPoufF15_1x1/$web_pdp_main_carousel_sm$/190905022629/leather-pouf.jpg" ,
+          name:"LEATHER POUF",
+          price:"75.6",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/MediumLeatherSaddlePoufSHS18_1x1/$web_pdp_main_carousel_sm$/190905022727/medium-square-leather-pouf.jpg" ,
+          name:"MEDIUM SQUARE LEATHER OTTOMAN-POUF",
+          price:"87.55",
+        },
+        {
+          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTYuBppMEh2YdrxUcNlCRqk6zWAI7EgAnI0fK6tqL3Mmxvr8ITS9cdFxY-r6WT1OPG-4Y&usqp=CAU" ,
+          name:"LEATHER OTTOMAN-POUF",
+          price:"68.77",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/KnittedPoufGraphiteS15_1x1/$web_pdp_main_carousel_sm$/190905022629/knitted-graphite-pouf.jpg" ,
+          name:"KNITTED GRAPHITE POUF",
+          price:"82.999",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/BraidedHempLgPoufSHF18_1x1/$web_pdp_main_carousel_sm$/190905023518/braided-jute-large-pouf.jpg" ,
+          name:"BRAIDED JUTE LARGE POUF",
+          price:"99.88",
+        },
+        {
+          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXqG8-RAdx9SOb43SPjROsHOLURE1KL_eflLQzqMOX_O_ozLDF86L-20QQFlA5SIKHd-M&usqp=CAU" ,
+          name:"BRAIDED JUTE OUTDOOR FLOOR CUSHION",
+          price:"48.97",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/GPSedonaPillowSetSHF18_1x1/$web_pdp_main_carousel_sm$/190905023647/2-piece-sedona-pillow-set.jpg" ,
+          name:"2-PIECE SEDONA PILLOW SET",
+          price:"65.444",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/GPSedonaLrgZabutonFlrPllwSHF18_1x1/$web_pdp_main_carousel_zoom_xs$/190905023647/sedona-large-zabuton-floor-pillow.jpg" ,
+          name:"SEDONA LARGE ZABUTON FLOOR PILLOW",
+          price:"78.0",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/GPSedonaSmZafuPllwSHF18_1x1/$web_pdp_main_carousel_xs$/220126164845/sedona-small-zafu-pillow.jpg" ,
+          name:"SEDONA SMALL ZAFU PILLOW",
+          price:"89.0",
+        },
+    ]
+console.log("data",data);
+function pillowData(){
+    data.map(function(el){
+  
+       let div= document.createElement("div");
+       div.innerHTML="";
+let name =document.createElement("p");
+let price =document.createElement("p");
+let image =document.createElement("img");
+let button =document.createElement("button");
+button.setAttribute("id","button");
+button.innerHTML="ADD TO CART";
+button.addEventListener("click",function(){
+  addTocart(el);
+})
+image.src=el.image;
+name.innerText =el.name;
+price.innerText=`$${el.price}`;
+div.append(image,name ,price,button);
+// console.log("div",div)
+document.querySelector("#pillow_page").append(div);
+
+});
+}
+// console.log("data11",data);
+localStorage.setItem("pillowData",JSON.stringify(data))
+pillowData(data)
+//................. add To cart function ....................//
+
+function  addTocart(el){
+  console.log("el",el);
+  alert("Added Your Product")
+  localStorage.setItem("addTocartPage",JSON.stringify(el))
+ window.location.href="addTocartPage.html";
+}
+
+
+
+
+//................. sort price function .....................//
+
+
+function selctvalue(){
+  let sortValue =document.querySelector("#select").vlaue;
+  console.log("sortValue",sortValue)
+}
+
+
+
+// function selectValue(){
+//       let Sortprice = document.getElementById("select").value;
+//      console.log("sortPrice", Sortprice)
+
+//   if(Sortprice == "High"){
+//     data.sort(function(a,b){
+//           return Number(a.price) - Number(b.price)
+//       })
+//   }
+//       if(Sortprice == "Low"){
+//         data.sort(function(a,b){
+//           return  Number(b.price) - Number(a.price)
+//       })
+//   }
+//   console.log("storData",data);
+//   pillowData(data)
+// }
+// selectValue()
+
+
+var data1 =[
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/20220119_mhomepage_bt_1?wid=390&qlt=65" ,
+          name:"SO GOOD THEY ALREADY SOLD OUT ONCE",
+            title:"SHOP BACK IN STOCK"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/123021_m_super_furniture_office?wid=690&qlt=65" ,
+          name:"THE RATTAN RESURGENCE ISN’T ENDING ANYTIME SOON",
+            title:"SHOP THE STORY"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/20220218_mhomepage_bt_3?wid=390&qlt=60" ,
+          name:"ENTER THE LUSH, DREAMLIKE WORLD OF FINE ARTIST KRISTEN GIORGI",
+            title:"SHOP NOW"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/070121_super_m_decor_mirrors_re?wid=690&qlt=65" ,
+          name:"CB2 IN YOUR SPACE: PHOTO BY @ANGELAGRACEDESIGN",
+            title:"SEE ALL #MYCB2"
+        },
+    ]
+    function pillowData1(){
+    data1.map(function(el){
+      let  div= document.createElement("div");
+let name =document.createElement("p");
+let title =document.createElement("p");
+let img =document.createElement("img");
+img.src=el.image;
+name.innerText =el.name;
+title.innerText =el.title;
+div.append(img,name,title);
+console.log("divmiddlePart",div)
+document.querySelector("#pillow2").append(div);
+
+});
+}
+pillowData1();
+
+
+
+
+
+
+
+
+
+
+
+document.querySelector("#view").addEventListener("click",function(){
+  window.location.href="PILLOWS&THROWS.html";
+});
+document.querySelector("#poufs").addEventListener("click",function(){
+  window.location.href="poufs.html";
+});
+document.querySelector("#pillows").addEventListener("click",function(){
+  window.location.href="pillows.html";
+});
+</script>

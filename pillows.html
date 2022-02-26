@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/nav.css">  
+    <link rel="stylesheet" href="./styles/footer.css">  
+</head>
+<body>
+    <div id="nav"></div>
+    <hr>
+    <select id="select">
+      <option value="">Sort Value</option>
+      <option value="High">Low-heigh</option>
+      <option value="Low">High-Low</option>
+    </select>
+<div id="container">
+<div id="sidebar"></div>
+<div id="right_bax">
+<div id="pillow_page"></div>
+    <div id="middlePart"></div>
+</div>
+
+</div>
+
+<div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+//......................for nav bar.........................//
+import navbar from "./components/nav.js"
+    let navbar_div  = document.getElementById("nav");
+    console.log("navbar_div")
+    navbar_div.innerHTML =navbar();
+
+//...................for side bar ......................//
+
+import sidebar from "./components/sidebar.js"
+let sidebar_div  = document.getElementById("sidebar");
+sidebar_div.innerHTML =sidebar();
+
+//......................for middle part.....................//
+
+import middlePart from "./components/middle.js"
+let middlePart_div  = document.getElementById("middlePart");
+middlePart_div.innerHTML =middlePart();
+// console.log("middlePart",middlePart)
+
+
+
+
+
+//......................for footer part.....................//
+
+import footer from "./components/footer.js"
+let footer_div  = document.getElementById("footer");
+footer_div.innerHTML =footer();
+// console.log("footerPart",footer)
+
+
+
+
+
+
+
+     var data =[
+     {
+          image:"https://cb2.scene7.com/is/image/CB2/FloraPillow23x23SHS22/$web_pdp_main_carousel_sm$/220105161810/23-flora-linen-pillow.jpg" ,
+          name:`NEW 23" FLORA LINEN PILLOW`,
+          price:"59.95",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/SisalBlackPillow23x23SHS22/$web_plp_card_mobile$/211020112807/23-sisal-black-pillow.jpg" ,
+          name:`NEW 23" SISAL BLACK PILLOW`,
+          price:"99.95",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/FiveMusesPillow23x11inSHS22/$web_pdp_main_carousel_sm$/220114142900/23x11-five-muses-pillow.jpg" ,
+          name:`NEW 23 "X11" FIVE MUSES PILLOW`, 
+            price:"54.95 ",
+            tag:"SHIPS FREE",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/AdelenaPillow20x20inSHS22/$web_plp_card_mobile$/220118102943/20-adelena-pillow.jpg" ,
+          name:`NEW 23'' ADELENA PILLOW`,
+          price:"59.95",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndTTji3VTrGmUauQLzDozVes5JCnJXoOW3kcBtTl06gIAWkm5Pjs9h_pAFKBWg36RqMk&usqp=CAU" ,
+          name:`NEW 18'' DREAMSCAPE WATERCOLOR PILLOW `,
+          price:"59.95",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/ArtigoLthrSdlPillow48x12SHS22/$web_pdp_main_carousel_sm$/211222133030/48x12-artigo-brown-leather-pillow.jpg" ,
+          name:`NEW48"X12" ARTIGO BROWN LEATHER PILLOW`,
+          price:"129.00",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/HarleeRoundBlackPillowSHS22/$web_pdp_main_carousel_xs$/211020112755/harlee-round-black-pillow.jpg" ,
+          name:`NEWHARLEE ROUND BLACK PILLOW`,
+          price:"54.95",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/CatalinaLinenPillow26x26SHS22/$web_pdp_main_carousel_sm$/211020112022/26-catalina-floral-pillow.jpg" ,
+          name:`NEW 26" CATALINA FLORAL PILLOW`,
+          price:"69.95",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/EmberPillow23x23SHS22/$web_plp_card_mobile$/211020112807/23-ember-pillow.jpg" ,
+          name:`NEW 23" EMBER PILLOW`,
+          price:"69.95",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv3F9X9MJE89g88Y-0XMUibM_KsQlbCf5QKd_aciEj-byv9Mm9RQD8PHPvu4r0eoamUf0&usqp=CAU" ,
+          name:`NEW 23" CONVEY FADED DENIM PILLOW`,
+          price:"99.95",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/ChannelFFOtPllwCvr18X18inSHF21/$web_pdp_main_carousel_sm$/210322151655/18-channel-faux-fur-oat-pillow.jpg" ,
+          name:`18" CHANNEL FAUX FUR OAT PILLOW`,
+          price:"39.95",
+          tag:"SHIPS FREE",
+        },
+        {
+          image:"https://m.media-amazon.com/images/S/aplus-media/sota/d67aad5f-6597-431e-bf8c-5a69936b2cc6.__CR0,0,2560,2560_PT0_SX300_V1___.jpg" ,
+          name:`20" PASSAGE PILLOW`,
+          price:"69.95",
+          tag:"SHIPS FREE",
+        },
+    ]
+// console.log("data",data);
+function pillowData(){
+    data.map(function(el){
+  
+       let div= document.createElement("div");
+       div.innerHTML="";
+let name =document.createElement("p");
+let price =document.createElement("p");
+let image =document.createElement("img");
+let button =document.createElement("button");
+button.setAttribute("id","button");
+button.innerHTML="ADD TO CART";
+button.addEventListener("click",function(){
+  addTocart(el);
+})
+image.src=el.image;
+name.innerText =el.name;
+price.innerText=`$${el.price}`;
+div.append(image,name ,price,button);
+// console.log("div",div)
+document.querySelector("#pillow_page").append(div);
+
+});
+}
+localStorage.setItem("pillowData",JSON.stringify(data))
+pillowData(data)
+
+
+
+
+
+// let x= pillowData(data)
+// console.log("x",x)
+document.querySelector("#select").addEventListener("click",function(){
+  // window.location.href="PILLOWS&THROWS.html";
+  let Sortprice = document.querySelector("#select").value;
+  console.log("Select",Sortprice);
+  if(Sortprice =="High"){
+    data.sort(function(a,b){
+      return Number(a.price) -Number(b.price)
+      pillowData(data);
+    })
+  }
+  if(Sortprice =="Low"){
+    data.sort(function(a,b){
+      return  Number(b.price)-Number(a.price);
+      // let x= pillowData(data)
+    })
+  }
+  console.log("Sortprice", data);
+pillowData(data);
+// let x= pillowData(data)
+// console.log("x",x)
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+//................. add To cart function ....................//
+
+
+
+
+function  addTocart(el){
+  console.log("elll",el);
+  alert("Added Your Product")
+  localStorage.setItem("addTocartPage",JSON.stringify(el))
+ window.location.href="addTocartPage.html";
+}
+
+
+
+
+
+var data1 =[
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/20220119_mhomepage_bt_1?wid=390&qlt=65" ,
+          name:"SO GOOD THEY ALREADY SOLD OUT ONCE",
+            title:"SHOP BACK IN STOCK"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/123021_m_super_furniture_office?wid=690&qlt=65" ,
+          name:"THE RATTAN RESURGENCE ISN’T ENDING ANYTIME SOON",
+            title:"SHOP THE STORY"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/20220218_mhomepage_bt_3?wid=390&qlt=60" ,
+          name:"ENTER THE LUSH, DREAMLIKE WORLD OF FINE ARTIST KRISTEN GIORGI",
+            title:"SHOP NOW"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/070121_super_m_decor_mirrors_re?wid=690&qlt=65" ,
+          name:"CB2 IN YOUR SPACE: PHOTO BY @ANGELAGRACEDESIGN",
+            title:"SEE ALL #MYCB2"
+        },
+    ]
+    function pillowData1(){
+    data1.map(function(el){
+      let  div= document.createElement("div");
+let name =document.createElement("p");
+let title =document.createElement("p");
+let image =document.createElement("img");
+image.src=el.image;
+name.innerText =el.name;
+title.innerText =el.title;
+div.append(image,name,title);
+console.log("div",div)
+document.querySelector("#pillow2").append(div);
+
+});
+}
+pillowData1();
+
+
+
+//................. sort price function .....................//
+
+
+
+
+
+
+
+
+
+document.querySelector("#view").addEventListener("click",function(){
+  window.location.href="PILLOWS&THROWS.html";
+});
+document.querySelector("#poufs").addEventListener("click",function(){
+  window.location.href="poufs.html";
+});
+document.querySelector("#pillows").addEventListener("click",function(){
+  window.location.href="pillows.html";
+});
+</script>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./styles/style.css">
+   <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/footer.css">    
+</head>
+<body>
+
+<div id="nav"></div>
+<hr>
+<div id="container">  
+
+
+<div id="sidebar"> </div>
+<div id="right_bax">
+    <p id="top">PILLOWS, POUFS, THROWS</p>
+    <div id="pillow"></div>
+    <div id="pillow_box">
+        <p>FREE SHIPPING ON 1000+ ITEMS</p>
+        <p>
+            Select bedding, pillows, curtains, shower curtains, knobs, handles, pulls, flatware, table linens & more.</p>
+            <p>SHOP NOW</p>
+    </div>
+    <div id="middlePart"></div>
+
+</div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
+<script type="module">
+
+//......................for nav bar.........................//
+import navbar from "./components/nav.js"
+    let navbar_div  = document.getElementById("nav");
+    console.log("navbar_div")
+    navbar_div.innerHTML =navbar();
+
+
+
+
+
+import sidebar from "./components/sidebar.js";
+let sidebar_div  = document.getElementById("sidebar");
+sidebar_div.innerHTML =sidebar();
+
+
+import middlePart from "./components/middle.js"
+let middlePart_div  = document.getElementById("middlePart");
+middlePart_div.innerHTML =middlePart();
+console.log("middlePart",middlePart)
+
+
+
+//......................for footer part.....................//
+
+import footer from "./components/footer.js"
+let footer_div  = document.getElementById("footer");
+footer_div.innerHTML =footer();
+console.log("footerPart",footer);
+
+    var data =[
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/070121_super_m_pillows_viewall?wid=690&qlt=60" ,
+          name:"VIEW ALL"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/123021_m_super_pillows_pillows?wid=690&qlt=65" ,
+          name:"PILLOWS"
+        },
+        {
+          image:"https://cb.scene7.com/is/image/Crate/AlvarezGardenPoufSHS18" ,
+          name:"POUFS"
+        },
+        {
+          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8snThlMeNDmoKZ3s2A1fb0BY4CDflu7xPog&usqp=CAU" ,
+          name:"THROWS"
+        },
+        {
+          image:"https://m.media-amazon.com/images/I/91pSb4R2hjL._AC_SX466_.jpg" ,
+          name:"BEST SELLERS"
+        },
+    ]
+console.log("data")
+function pollowData(){
+    data.map(function(el){
+      let  div= document.createElement("div");
+let name =document.createElement("p");
+let image =document.createElement("img");
+image.src=el.image;
+name.innerText =el.name;
+div.append(image,name);
+console.log("div",div)
+document.querySelector("#pillow").append(div);
+
+});
+}
+pollowData()
+
+
+
+
+
+var data1 =[
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/20220119_mhomepage_bt_1?wid=390&qlt=65" ,
+          name:"SO GOOD THEY ALREADY SOLD OUT ONCE",
+            title:"SHOP BACK IN STOCK"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/20220218_mhomepage_bt_2?wid=390&qlt=60" ,
+          name:"THE RATTAN RESURGENCE ISN’T ENDING ANYTIME SOON",
+            title:"SHOP THE STORY"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/20220218_mhomepage_bt_3?wid=390&qlt=60" ,
+          name:"ENTER THE LUSH, DREAMLIKE WORLD OF FINE ARTIST KRISTEN GIORGI",
+            title:"SHOP NOW"
+        },
+        {
+          image:"https://cb2.scene7.com/is/image/CB2/070121_super_m_decor_mirrors_re?wid=690&qlt=65" ,
+          name:"CB2 IN YOUR SPACE: PHOTO BY @ANGELAGRACEDESIGN",
+            title:"SEE ALL #MYCB2"
+        },
+    ]
+    function pollowData1(){
+    data1.map(function(el){
+      let  div= document.createElement("div");
+let name =document.createElement("p");
+let title =document.createElement("p");
+let image =document.createElement("img");
+image.src=el.image;
+name.innerText =el.name;
+title.innerText =el.title;
+div.append(image,name,title);
+console.log("div",div)
+document.querySelector("#pillow2").append(div);
+
+});
+}
+pollowData1();
+
+
+
+
+
+
+
+
+document.querySelector("#view").addEventListener("click",function(){
+  window.location.href="PILLOWS&THROWS.html";
+});
+document.querySelector("#poufs").addEventListener("click",function(){
+  window.location.href="poufs.html";
+});
+document.querySelector("#pillows").addEventListener("click",function(){
+  window.location.href="pillows.html";
+});
+</script>
+
